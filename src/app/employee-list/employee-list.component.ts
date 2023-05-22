@@ -18,7 +18,7 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit(): void {
     this.page = 1; // Set the initial value
-    this.fetchEmployees(1, 15);
+    this.fetchEmployees(1, 30);
   }
 
   fetchEmployees(page: number, perPage: number): void {

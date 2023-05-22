@@ -10,6 +10,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponentComponent } from './employee-detail-component/employee-detail-component.component';
 import { FooterComponent } from './footer/footer.component';
 import { PaginationServiceComponent } from './pagination-service/pagination-service.component';
+import { FormComponentComponent } from './form-component/form-component.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PaginationServiceComponent } from './pagination-service/pagination-serv
     EmployeeListComponent,
     EmployeeDetailComponentComponent,
     FooterComponent,
-    PaginationServiceComponent
+    PaginationServiceComponent,
+    FormComponentComponent
   ],
   imports: [
     BrowserModule,
