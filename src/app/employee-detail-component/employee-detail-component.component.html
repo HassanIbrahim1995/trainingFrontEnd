@@ -1,0 +1,52 @@
+<form *ngIf="employee" (ngSubmit)="saveEmployee()" class="mt-4">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First Name:</label>
+    <input type="text" id="firstName" name="firstName" class="form-control" [(ngModel)]="employee.firstName" required>
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="employee.lastName" required>
+  </div>
+  <div class="mb-3">
+    <label for="birthday" class="form-label">Birthday:</label>
+    <input type="text" id="birthday" name="birthday" class="form-control" [(ngModel)]="employee.birthday" required>
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age:</label>
+    <input type="text" id="age" name="age" class="form-control" [(ngModel)]="employee.age" required>
+  </div>
+  <div class="mb-3">
+    <label for="phoneNumber" class="form-label">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" [(ngModel)]="employee.phoneNumber" required>
+  </div>
+  <div class="mb-3">
+    <label for="department" class="form-label">Department:</label>
+    <input type="text" id="department" name="department" class="form-control" [(ngModel)]="employee.department" required>
+  </div>
+  
+  <!-- Addresses -->
+  <div class="mb-3">
+    <label for="addresses" class="form-label">Addresses:</label>
+    <div *ngFor="let address of employee.addresses">
+      <div class="row">
+        <div class="col">
+          <input type="text" id="streetName" name="streetName" class="form-control" [(ngModel)]="address.streetName" required>
+        </div>
+        <div class="col">
+          <input type="text" id="houseNumber" name="houseNumber" class="form-control" [(ngModel)]="address.houseNumber" required>
+        </div>
+        <div class="col">
+          <input type="text" id="zipCode" name="zipCode" class="form-control" [(ngModel)]="address.zipCode" required>
+        </div>
+        <div class="col">
+          <input type="text" id="city" name="city" class="form-control" [(ngModel)]="address.city" required>
+        </div>
+        <div class="col">
+          <input type="text" id="country" name="country" class="form-control" [(ngModel)]="address.country" required>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
